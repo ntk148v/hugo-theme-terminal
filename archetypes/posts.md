@@ -1,10 +1,14 @@
 +++
-title = ""
+title: "{{ replace .Name "-" " " | title }}"
 date = ""
-author = ""
 cover = ""
-tags = ["", ""]
 keywords = ["", ""]
 description = ""
 showFullContent = false
+date: {{ .Date }}
+showDate: true
+draft: true
+comment: true
+authors:
+tags: ["blog","story"]
 +++
