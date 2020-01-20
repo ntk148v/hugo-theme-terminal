@@ -12,9 +12,7 @@
 {{ end }}
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
-{{ if (fileExists "static/style.css") -}}
-  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
-{{- end }}
+<link rel="stylesheet" href="{{ "style.css" | absURL }}">
 
 <!-- Icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
@@ -24,12 +22,16 @@
 <link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
 {{ end }}
 
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ if .IsHome }}{{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ else }}{{ .Title }} :: {{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ end }}" />
 <meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
-<meta name="twitter:creator" content="{{ .Params.Author }}" />
+<!-- TODO Fix this one -->
+<!-- <meta name="twitter:creator" content="{{ .Params.contact.twitter }}" /> -->
 <meta name="twitter:image" content="{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
 
 <!-- OG data -->
