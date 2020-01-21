@@ -26,6 +26,10 @@
     zoom: 1;
 }
 
+.author-container ul li:before{
+    display: none;
+}
+
 .author-container ul li a {
     display: block;
     font-size: 1.5em;
