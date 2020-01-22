@@ -15,6 +15,13 @@
           </a>
         </li>
         {{ end }}
+        {{ with .Params.contact.telegram }}
+        <li>
+          <a href="https://t.me//@{{ . }}">
+            <i class="fa fa-telegram"></i>
+          </a>
+        </li>
+        {{ end }}
         {{ with .Params.contact.github }}
         <li>
           <a href="https://github.com/{{ . }}">

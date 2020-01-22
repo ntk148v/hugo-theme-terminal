@@ -6,6 +6,7 @@ contact:
     github:
     linkedin:
     email:
+    telegram:
 website:
 joinDate: {{ .Date }}
 comment: false
